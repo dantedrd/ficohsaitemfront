@@ -33,7 +33,7 @@ Es una aplicación en nextjs con rect  desarrollada para buscar items.
 2. **[/items?search=query]**: puedes ejecutar la siguiente url para buscar los item y listarlos.
 3. **[/item/:id]**: puedes buscar y visualizar un item por el id.
 
-La demo de la aplicacion la puedes ver corriendo desde la siguiente ruta [Swagger](http://52.21.129.164/).
+La demo de la aplicacion la puedes ver corriendo desde la siguiente ruta [APP](http://52.21.129.164/).
 
 
 ## Pruebas
