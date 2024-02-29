@@ -33,8 +33,6 @@ Es una aplicación en nextjs con rect  desarrollada para buscar items.
 2. **[http://52.21.129.164/items?search=no]**: puedes ejecutar la siguiente url para buscar los item y listarlos.
 3. **[http://52.21.129.164/item/1]**: puedes buscar y visualizar un item por el id.
 
-La demo de la aplicacion la puedes ver corriendo desde la siguiente ruta [APP](http://52.21.129.164/).
-
 
 ## Pruebas
 Las pruebas unitarias se pueden ejecutar mediante el comando:
