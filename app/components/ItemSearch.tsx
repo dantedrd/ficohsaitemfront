@@ -1,21 +1,18 @@
 "use client";
 
-import { useEffect } from "react";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+
 import Button from '@mui/material/Button';
 import { TextField } from "@mui/material";
 import { useRouter } from "next/navigation";
-import itemStore from "../store/ItemStore";
+import {itemStore} from "../store/ItemStore";
 
 export default function ItemSearch(props: any) {
-
-    const search = itemStore(state => state.search);
-    const searchItem = itemStore(state => state.searchItem);
+    const { searchItem, search } = itemStore();
 
     const router = useRouter();
 
     const redirectToAnotherPage = () => {
-      router.push(`/items?search=${searchItem}`); // Redirecciona a /otra-pagina
+      router.push(`/items?search=${searchItem}`);
     };
 
 

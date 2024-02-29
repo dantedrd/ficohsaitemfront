@@ -3,12 +3,11 @@
 import { useEffect } from "react";
 import { createTheme } from '@mui/material/styles';
 import { Card, CardContent, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
-import itemStore from "../store/ItemStore";
+import {itemStore} from "../store/ItemStore";
 
 export default function Item(props: any) {
+    const {setItem,item} = itemStore();
 
-    const setItem = itemStore(state => state.setItem);
-    const item = itemStore(state => state.item);
     useEffect(() => {
         setItem(props.item)
     }, [props.item])

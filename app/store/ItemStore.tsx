@@ -21,4 +21,4 @@ const itemStore = create<MyState & MyActions>((set) => ({
   setItem: async (item:any) => {set({ item: item})},
 }));
 
-export default itemStore;
+export {itemStore};

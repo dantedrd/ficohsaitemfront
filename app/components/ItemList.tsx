@@ -3,12 +3,10 @@
 import { useEffect } from "react";
 import { IconButton, Link, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import itemStore from "../store/ItemStore";
+import {itemStore} from "../store/ItemStore";
 
 export default function ItemList(props: any) {
-
-    const setItems = itemStore(state => state.setItems);
-    const items = itemStore(state => state.items);
+    const {setItems,items} = itemStore();
 
     useEffect(() => {
         setItems(props.itemsList.data)
