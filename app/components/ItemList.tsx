@@ -5,9 +5,27 @@ import { IconButton, Link, Paper, Table, TableBody, TableCell, TableContainer, T
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import {itemStore} from "../store/ItemStore";
 
+/**
+ * Component displaying a list of items.
+ * @module ItemList
+ * @param {Object} props - The component properties.
+ * @param {Object} props.itemsList - The list of items to display.
+ * @returns {JSX.Element} The item list component.
+ */
 export default function ItemList(props: any) {
+    
+    /**
+     * State and actions from the item store.
+     * @type {Object}
+     * @property {Function} setItems - Function to set the items in the store.
+     * @property {Array} items - The list of items from the store.
+     */
     const {setItems,items} = itemStore();
 
+     /**
+     * Updates the items in the store when the component mounts or when the items list prop changes.
+     * @returns {void}
+     */
     useEffect(() => {
         setItems(props.itemsList.data)
     }, [props.itemsList])
